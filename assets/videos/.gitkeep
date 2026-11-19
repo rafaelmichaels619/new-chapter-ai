@@ -1,0 +1,2 @@
+Put video files in this folder (.mp4 or .webm). Then add them in data/media.js.
+Example path: assets/videos/launch-spot.mp4
