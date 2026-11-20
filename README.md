@@ -92,7 +92,7 @@ Headlines, the about text, and the services copy are in `index.html`. Search for
 
 All three are in `data/media.js`.
 
-- **email** — `TODO`: replace `hello@example.com` with your real address. Until a form service is connected, **Send the brief** opens the visitor's email app with the message filled in, addressed to this inbox.
+- **email** — `hello@newchapteraistudio.com`. Until a form service is connected, **Send the brief** opens the visitor's email app with the message filled in, addressed to this inbox.
 - **formEndpoint** — `TODO`: leave this as `""`, or paste a Formspree endpoint such as `https://formspree.io/f/xxxxxxxx` if you want the form to send without opening an email app. Create a form at [formspree.io](https://formspree.io), copy its endpoint, and paste it between the quotes. The page says, in the contact section, which of the two modes is active.
 - **socials** — `TODO`: paste each profile URL into `href`. An empty `href` shows the name with "link soon" instead of a link that goes nowhere.
 

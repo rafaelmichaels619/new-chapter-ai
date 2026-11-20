@@ -25,12 +25,12 @@ assert.deepStrictEqual(parseMedia("assets/videos/spot.webm"), {
   src: "assets/videos/spot.webm"
 });
 assert.strictEqual(normalizePath("/assets/images/a.jpg"), "assets/images/a.jpg");
-assert.strictEqual(normalizePath("https://cdn.example.com/a.jpg"), "https://cdn.example.com/a.jpg");
+assert.strictEqual(normalizePath("https://cdn.videos.test/a.jpg"), "https://cdn.videos.test/a.jpg");
 
 assert.strictEqual(endpointReady(""), false);
 assert.strictEqual(endpointReady("https://formspree.io/f/xxxxxxxx"), false);
 assert.strictEqual(endpointReady("https://formspree.io/f/abcdwxyz"), true);
-assert.strictEqual(emailReady("hello@example.com"), false);
-assert.strictEqual(emailReady("studio@newchapter.ai"), true);
+assert.strictEqual(emailReady(""), false);
+assert.strictEqual(emailReady("hello@newchapteraistudio.com"), true);
 
 console.log("paths ok");

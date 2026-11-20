@@ -49,9 +49,8 @@
  * }
  */
 const SITE = {
-  // TODO: replace with your real email. The contact form writes to this
-  // address until a form endpoint is set below.
-  email: "hello@example.com",
+  // The contact form writes to this address until a form endpoint is set below.
+  email: "hello@newchapteraistudio.com",
 
   // TODO: paste a Formspree endpoint to receive the form on the web,
   // for example "https://formspree.io/f/xxxxxxxx"

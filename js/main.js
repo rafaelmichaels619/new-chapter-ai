@@ -47,14 +47,14 @@
   function endpointReady(value) {
     var endpoint = String(value || "").trim();
     if (!endpoint) return false;
-    if (/TODO|example\.com|your-id|xxxxxxxx/i.test(endpoint)) return false;
+    if (/TODO|your-id|xxxxxxxx/i.test(endpoint)) return false;
     return /^https:\/\/[^ ]+$/i.test(endpoint);
   }
 
   function emailReady(value) {
     var email = String(value || "").trim();
     if (!email) return false;
-    if (/example\.com|TODO|you@email/i.test(email)) return false;
+    if (/TODO|you@email/i.test(email)) return false;
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
