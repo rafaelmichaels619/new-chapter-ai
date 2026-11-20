@@ -1,0 +1,2 @@
+Put stills and video thumbnails in this folder (.jpg, .png, or .webp). Then add them in data/media.js.
+Example path: assets/images/frame-01.jpg

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Chapter AI — Cinematic films, stills, and brand ads</title>
+  <meta name="description" content="New Chapter AI is Leo Abustan's studio for AI-generated films and still images, and cinematic ads for brands.">
+  <meta name="theme-color" content="#08080a">
+  <meta name="author" content="Leo Abustan">
+  <link rel="canonical" href="https://rafaelmichaels619.github.io/new-chapter-ai/">
+  <meta property="og:title" content="New Chapter AI">
+  <meta property="og:description" content="Cinematic stories, generated. AI films, stills, and cinematic ads for brands.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rafaelmichaels619.github.io/new-chapter-ai/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="New Chapter AI">
+  <meta name="twitter:description" content="Cinematic stories, generated. AI films, stills, and cinematic ads for brands.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "New Chapter AI",
+    "founder": {
+      "@type": "Person",
+      "name": "Leo Abustan"
+    },
+    "description": "AI-generated films and still images, and cinematic ads for brands.",
+    "url": "https://rafaelmichaels619.github.io/new-chapter-ai/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#top">
+      <span class="logo-mark" aria-hidden="true">NC</span>
+      <span class="logo-type">New Chapter <em>AI</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="when-closed">Menu</span>
+      <span class="when-open">Close</span>
+    </button>
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#stills">Stills</a>
+      <a href="#services">Hire</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <!--
+      Background slot. Set hero.video in data/media.js for a film,
+      or hero.image for a still. Empty = animated backdrop.
+    -->
+    <div class="hero-media" id="hero-media">
+      <div class="hero-fallback" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="hero-frame" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="rec" aria-hidden="true"></span> Portfolio and studio</p>
+        <h1>
+          <span class="line">New</span>
+          <span class="line">Chapter <em>AI</em></span>
+        </h1>
+        <p class="tagline">Cinematic stories, generated.</p>
+        <p class="lede">Films and still images made with AI, by Leo Abustan. Cinematic ads for brands that want a look with a point of view.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#work">Watch the work</a>
+          <a class="btn btn-ghost" href="#services">Hire for a cinematic ad</a>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <p>Leo Abustan <span class="sep" aria-hidden="true">/</span> Films, stills, brand spots</p>
+        <a class="scroll-cue" href="#work">
+          <span>Scroll</span>
+          <span class="scroll-line" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="work">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">01 — Films</p>
+          <h2>Selected work</h2>
+          <p class="deck">Spots, reels, and short films. Click a frame to play it.</p>
+        </header>
+        <div id="video-grid" class="video-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="stills">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="eyebrow">02 — Stills</p>
+          <h2>Image gallery</h2>
+          <p class="deck">Still images from the same practice. Click a frame to open it. The grid crops; the lightbox shows the whole picture.</p>
+        </header>
+        <div id="image-grid" class="still-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="services-layout">
+          <div class="services-intro reveal">
+            <p class="eyebrow">03 — For hire</p>
+            <h2>Hire me for cinematic ads.</h2>
+            <p class="deck">I make short films for brands — campaign spots, product launches, and the cutdowns that run beside them. The picture is generated and directed, then finished like a real edit.</p>
+          </div>
+          <div class="offers reveal">
+            <article class="offer">
+              <h3>Campaign spots</h3>
+              <p>Fifteen, thirty, and sixty second films for a launch, a homepage, or a brand world.</p>
+            </article>
+            <article class="offer">
+              <h3>Product films</h3>
+              <p>Close, specific product stories. The object, the light, and the pace — directed, not pulled from a template.</p>
+            </article>
+            <article class="offer">
+              <h3>Cutdowns and stills</h3>
+              <p>Vertical and square versions of the same film, plus still frames that match the look for paid and organic.</p>
+            </article>
+          </div>
+        </div>
+
+        <ol class="process">
+          <li class="reveal">
+            <span class="num">01</span>
+            <h3>Brief</h3>
+            <p>The brand, the product, who it is for, and what the spot has to do.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">02</span>
+            <h3>Concept</h3>
+            <p>A short treatment: the look, the pace, and the shots that matter.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">03</span>
+            <h3>Make</h3>
+            <p>Generate, direct, edit, and grade until the film holds together.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">04</span>
+            <h3>Deliver</h3>
+            <p>Masters, cutdowns, and stills, ready to publish.</p>
+          </li>
+        </ol>
+
+        <div class="cta-band reveal">
+          <div>
+            <p class="eyebrow">Next</p>
+            <p class="cta-line">Have a brand that needs a film?</p>
+          </div>
+          <a class="btn btn-gold" href="#contact">Start with a brief</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="reveal">
+          <p class="eyebrow">04 — About</p>
+          <h2>Leo Abustan, New Chapter AI.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>New Chapter AI is my studio for AI-generated film and still images. I make the work I want to see — cinematic, specific, a little strange — and I make the same kind of work for brands.</p>
+          <p>This site is the portfolio and the front door. New pieces go up as they are finished. If a frame says Placeholder, that slot is open and the file has not been added yet.</p>
+          <p>For a cinematic ad, write with the brand, the timeline, and any references you already love. A short note is plenty.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap contact-layout">
+        <div class="reveal">
+          <p class="eyebrow">05 — Contact</p>
+          <h2>Start a project.</h2>
+          <p class="deck">A few lines are enough. Tell me the brand and what you want the film to do.</p>
+          <p class="email-line"><a data-email href="mailto:hello@example.com">hello@example.com</a></p>
+          <p class="fine-print" id="email-note"></p>
+          <ul class="social-list" id="social-list"></ul>
+          <p class="fine-print" id="form-note"></p>
+        </div>
+
+        <!-- TODO: form delivery is configured in data/media.js (email + formEndpoint). -->
+        <form id="contact-form" class="contact-form reveal" novalidate>
+          <label class="hp">
+            Leave this blank
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </label>
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" required maxlength="120">
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required maxlength="180">
+            </label>
+          </div>
+          <label>
+            <span>Brand</span>
+            <input name="brand" type="text" autocomplete="organization" maxlength="160">
+          </label>
+          <label>
+            <span>What you need</span>
+            <select name="project">
+              <option>Cinematic brand film</option>
+              <option>Product or launch film</option>
+              <option>Social cutdowns</option>
+              <option>Still image set</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required maxlength="2000" placeholder="The brand, the timeline, and any references."></textarea>
+          </label>
+          <button class="btn btn-gold" type="submit">Send the brief</button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark" aria-hidden="true">NC</span>
+        <span class="logo-type">New Chapter <em>AI</em></span>
+      </a>
+      <p>© <span id="year">2026</span> Leo Abustan</p>
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <dialog id="lightbox" class="lightbox" aria-labelledby="lb-title">
+    <div class="lb-shell">
+      <div class="lb-bar">
+        <p class="lb-count" id="lb-count"></p>
+        <div class="lb-nav">
+          <button type="button" class="text-btn" id="lb-prev">Previous</button>
+          <button type="button" class="text-btn" id="lb-next">Next</button>
+          <button type="button" class="text-btn" id="lb-close">Close</button>
+        </div>
+      </div>
+      <div id="lb-stage" class="lb-stage"></div>
+      <div class="lb-meta">
+        <h3 id="lb-title"></h3>
+        <p id="lb-desc"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="noscript">JavaScript is off, so the film and still grids cannot load. Everything they show is listed in data/media.js. You can still read the page and email from the contact section once an address is set.</p>
+  </noscript>
+
+  <script src="data/media.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
