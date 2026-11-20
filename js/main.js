@@ -101,8 +101,24 @@
   function mountHero() {
     var slot = document.getElementById("hero-media");
     var hero = SITE.hero || {};
+    if (!slot) return;
     var media = parseMedia(hero.video);
-    if (media.type === "empty" || !slot) return;
+    if (media.type === "empty") {
+      var still = normalizePath(hero.image || "");
+      if (!still) return;
+      var img = document.createElement("img");
+      img.className = "hero-still";
+      img.src = still;
+      img.alt = "";
+      img.setAttribute("aria-hidden", "true");
+      img.addEventListener("error", function () {
+        img.remove();
+        slot.classList.remove("has-still");
+      });
+      slot.appendChild(img);
+      slot.classList.add("has-still");
+      return;
+    }
 
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion && media.type !== "file") return;
@@ -316,6 +332,9 @@
     document.getElementById("lb-desc").textContent = item.description || "";
     document.getElementById("lb-count").textContent =
       (state.index + 1) + " / " + state.items.length;
+    var single = state.items.length < 2;
+    document.getElementById("lb-prev").hidden = single;
+    document.getElementById("lb-next").hidden = single;
 
     if (media.type === "empty") {
       stage.appendChild(emptyPanel(state.kind));
@@ -350,8 +369,14 @@
 
     var video = document.createElement("video");
     video.controls = true;
+    video.setAttribute("controls", "");
     video.autoplay = true;
     video.playsInline = true;
+    video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.muted = false;
+    video.removeAttribute("muted");
+    video.preload = "auto";
     video.src = media.src;
     if (item.thumbnail) video.poster = normalizePath(item.thumbnail);
     video.addEventListener("error", function () {
@@ -361,6 +386,10 @@
       ));
     });
     stage.appendChild(video);
+    // The click that opened the lightbox is a user gesture, so playback
+    // can start with sound. Controls stay if the browser blocks it.
+    var started = video.play();
+    if (started && typeof started.catch === "function") started.catch(function () {});
   }
 
   function emptyPanel(kind, message) {

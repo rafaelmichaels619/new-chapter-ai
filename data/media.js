@@ -57,10 +57,12 @@ const SITE = {
   formEndpoint: "",
 
   // Hero background. A local file, a direct .mp4/.webm URL, or a
-  // YouTube/Vimeo link. Leave video as "" for the animated backdrop.
+  // YouTube/Vimeo link. Leave video as "" to show hero.image instead,
+  // or the animated backdrop when image is empty too.
   hero: {
     video: "",
-    thumbnail: ""
+    thumbnail: "",
+    image: "assets/images/portrait-satin-blouse.jpg"
   },
 
   // TODO: replace each href with your profile URL.
@@ -74,67 +76,31 @@ const SITE = {
 
   videos: [
     {
-      title: "Opening spot",
-      file: "",
-      thumbnail: "",
-      description: "Placeholder for a cinematic brand film. Drop a file in assets/videos and set the path here."
-    },
-    {
-      title: "Product reel",
-      file: "",
-      thumbnail: "",
-      description: "Placeholder for a product or launch film."
-    },
-    {
-      title: "Social cutdown",
-      file: "",
-      thumbnail: "",
-      description: "Placeholder for a vertical reel or a short cutdown."
-    },
-    {
-      title: "Mood piece",
-      file: "",
-      thumbnail: "",
-      description: "Placeholder for a short film or an experiment."
+      title: "The Spokesperson",
+      file: "assets/videos/spokesperson-office.mp4",
+      thumbnail: "assets/images/spokesperson-office-poster.jpg",
+      description: "An AI spokesperson ad — a presenter who never needs a reshoot."
     }
   ],
 
   images: [
     {
-      title: "Frame 01",
-      file: "",
+      title: "Quiet Luxury",
+      file: "assets/images/portrait-satin-blouse.jpg",
       thumbnail: "",
-      description: "Placeholder still. Put an image in assets/images and set file to its path."
+      description: "Cream satin and soft window light, held in one still."
     },
     {
-      title: "Frame 02",
-      file: "",
+      title: "The Executive",
+      file: "assets/images/portrait-executive-suit.jpg",
       thumbnail: "",
-      description: "Placeholder still. The grid crops to the frame; the full image opens on click."
+      description: "A navy suit, city glass, and the calm of a high floor."
     },
     {
-      title: "Frame 03",
-      file: "",
+      title: "Morning Ritual",
+      file: "assets/images/lifestyle-kitchen-selfie.jpg",
       thumbnail: "",
-      description: "Placeholder still."
-    },
-    {
-      title: "Frame 04",
-      file: "",
-      thumbnail: "",
-      description: "Placeholder still."
-    },
-    {
-      title: "Frame 05",
-      file: "",
-      thumbnail: "",
-      description: "Placeholder still."
-    },
-    {
-      title: "Frame 06",
-      file: "",
-      thumbnail: "",
-      description: "Placeholder still."
+      description: "The first look of the day, in a bright kitchen."
     }
   ]
 };

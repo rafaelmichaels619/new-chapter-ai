@@ -64,7 +64,7 @@ Clicking the card opens the film in a lightbox. Local files play in the browser.
 
 ### Hero background
 
-The big opening frame can play a film behind the name. In `data/media.js`, set `hero.video` to a local file or a YouTube/Vimeo link, and `hero.thumbnail` to a poster if you have one. Leave `hero.video` empty and the slow color backdrop stays.
+The big opening frame can play a film behind the name. In `data/media.js`, set `hero.video` to a local file or a YouTube/Vimeo link, and `hero.thumbnail` to a poster if you have one. If there is no film, set `hero.image` to a still in `assets/images/` and it sits on the right of the hero (full-bleed on a phone). Leave both empty and the slow color backdrop stays. A film always takes the slot over the still.
 
 ## Add a still
 
