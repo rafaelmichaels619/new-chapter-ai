@@ -1161,7 +1161,7 @@ a {
 
 @media (min-width: 1040px) {
   .still-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

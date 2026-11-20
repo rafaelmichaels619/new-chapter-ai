@@ -101,6 +101,12 @@ const SITE = {
       file: "assets/images/lifestyle-kitchen-selfie.jpg",
       thumbnail: "",
       description: "The first look of the day, in a bright kitchen."
+    },
+    {
+      title: "First Impression",
+      file: "assets/images/portrait-boardroom-smile.jpg",
+      thumbnail: "",
+      description: "A boardroom smile, with the city behind the glass."
     }
   ]
 };
