@@ -19,6 +19,8 @@
  * 2. Copy one of the objects in `images` below and set `file`.
  *
  * Leave `file` as "" to keep the labeled placeholder.
+ * Optional `frame: "tall"` keeps a full-body portrait from being cropped
+ * to the usual 4:5 frame.
  * Leave `thumbnail` as "" and YouTube links will use YouTube's own image.
  * Vimeo does not provide one automatically — add a thumbnail if you want one.
  *
@@ -107,6 +109,13 @@ const SITE = {
       file: "assets/images/portrait-boardroom-smile.jpg",
       thumbnail: "",
       description: "A boardroom smile, with the city behind the glass."
+    },
+    {
+      title: "Peak Form",
+      file: "assets/images/fitness-gym-portrait.jpg",
+      thumbnail: "",
+      description: "Full body in the gym — a frame for fitness and apparel.",
+      frame: "tall"
     }
   ]
 };

@@ -709,6 +709,10 @@ a {
   aspect-ratio: 4 / 5;
 }
 
+.still.frame-tall .thumb {
+  aspect-ratio: 9 / 16;
+}
+
 .still .card-title {
   position: static;
   display: block;
@@ -1159,9 +1163,29 @@ a {
   }
 }
 
+@media (min-width: 700px) and (max-width: 1039px) {
+  .still-grid .still:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - 0.45rem);
+    justify-self: center;
+  }
+}
+
 @media (min-width: 1040px) {
-  .still-grid {
-    grid-template-columns: 1fr 1fr;
+  .still-grid:has(.still:nth-child(5):last-child) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .still-grid:has(.still:nth-child(5):last-child) .still {
+    grid-column: span 2;
+  }
+
+  .still-grid:has(.still:nth-child(5):last-child) .still:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .still-grid:has(.still:nth-child(5):last-child) .still:nth-child(5) {
+    grid-column: 4 / span 2;
   }
 }
 

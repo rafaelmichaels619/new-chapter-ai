@@ -204,7 +204,7 @@
       var thumb = normalizePath(item.thumbnail || "") || (media.type === "file" ? media.src : "");
       var placeholder = media.type === "empty";
       return (
-        '<button type="button" class="still reveal" data-kind="image" data-index="' + index + '">' +
+        '<button type="button" class="still reveal' + (item.frame === "tall" ? " frame-tall" : "") + '" data-kind="image" data-index="' + index + '">' +
           '<span class="thumb tone-' + (index % 6) + (thumb ? " has-image" : "") + '">' +
             (thumb ? '<img src="' + esc(thumb) + '" alt="" loading="lazy">' : "") +
             (placeholder ? '<span class="badge">Placeholder</span>' : "") +
