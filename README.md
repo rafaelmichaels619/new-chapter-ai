@@ -1,6 +1,6 @@
-# New Chapter AI
+# New Chapter AI Studio
 
-A one-page site for Leo Abustan's AI films and still images, and for brands who want to hire him to make cinematic ads.
+A one-page site for New Chapter AI Studio: AI films and still images, and cinematic ads for brands.
 
 Two jobs, one page:
 

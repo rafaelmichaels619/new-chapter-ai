@@ -31,6 +31,6 @@ assert.strictEqual(endpointReady(""), false);
 assert.strictEqual(endpointReady("https://formspree.io/f/xxxxxxxx"), false);
 assert.strictEqual(endpointReady("https://formspree.io/f/abcdwxyz"), true);
 assert.strictEqual(emailReady("hello@example.com"), false);
-assert.strictEqual(emailReady("leo@newchapter.ai"), true);
+assert.strictEqual(emailReady("studio@newchapter.ai"), true);
 
 console.log("paths ok");

@@ -1,4 +1,4 @@
-/* New Chapter AI — render the grids, the hero film, and the contact form. */
+/* New Chapter AI Studio — render the grids, the hero film, and the contact form. */
 (function () {
   "use strict";
 
@@ -536,7 +536,7 @@
       if (!response.ok) throw new Error("Request failed");
       form.reset();
       status.dataset.state = "ok";
-      status.textContent = "Sent. I'll read it and write back.";
+      status.textContent = "Sent. We'll read it and write back.";
     }).catch(function () {
       status.dataset.state = "err";
       var fallback = String(SITE.email || "").trim();

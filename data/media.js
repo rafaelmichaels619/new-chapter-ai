@@ -1,5 +1,5 @@
 /**
- * New Chapter AI — the list you edit.
+ * New Chapter AI Studio — the list you edit.
  *
  * Page wording (headlines, about, services) lives in index.html.
  * Films, stills, the hero background, email, social links, and the
