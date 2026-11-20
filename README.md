@@ -121,6 +121,8 @@ You do not need a custom domain, Node, or a hosting bill for this.
 | File | What it is |
 | --- | --- |
 | `index.html` | The page: hero, reel, gallery, services, about, contact |
+| `privacy.html` | Privacy Policy |
+| `terms.html` | Terms of Use |
 | `css/styles.css` | Look, motion, and the phone layout |
 | `js/main.js` | Lightbox, menus, and the contact form |
 | `data/media.js` | The list of films, stills, email, socials, and the form endpoint |
