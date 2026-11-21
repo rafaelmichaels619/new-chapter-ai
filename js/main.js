@@ -106,16 +106,26 @@
     if (media.type === "empty") {
       var still = normalizePath(hero.image || "");
       if (!still) return;
+      var picture = document.createElement("picture");
+      picture.className = "hero-still";
+      var webp = still.replace(/\.jpe?g$/i, ".webp");
+      if (webp !== still) {
+        var source = document.createElement("source");
+        source.srcset = webp;
+        source.type = "image/webp";
+        picture.appendChild(source);
+      }
       var img = document.createElement("img");
-      img.className = "hero-still";
       img.src = still;
-      img.alt = "";
-      img.setAttribute("aria-hidden", "true");
+      img.alt = hero.alt || "Still from New Chapter AI Studio";
+      img.decoding = "async";
+      img.setAttribute("fetchpriority", "high");
       img.addEventListener("error", function () {
-        img.remove();
+        picture.remove();
         slot.classList.remove("has-still");
       });
-      slot.appendChild(img);
+      picture.appendChild(img);
+      slot.appendChild(picture);
       slot.classList.add("has-still");
       return;
     }
@@ -166,6 +176,19 @@
     return frame;
   }
 
+  function pictureTag(src, alt, loading) {
+    var img = '<img src="' + esc(src) + '" alt="' + esc(alt) + '" loading="' + loading + '" decoding="async">';
+    var webp = String(src).replace(/\.jpe?g$/i, ".webp");
+    if (webp === src) return img;
+    return '<picture><source srcset="' + esc(webp) + '" type="image/webp">' + img + "</picture>";
+  }
+
+  function mediaAlt(item) {
+    var title = item.title || "Still";
+    var description = item.description || "";
+    return description ? title + ". " + description : title;
+  }
+
   function renderVideos() {
     var grid = document.getElementById("video-grid");
     var items = SITE.videos || [];
@@ -180,7 +203,7 @@
       return (
         '<button type="button" class="video-card' + (index === 0 ? " featured" : "") + ' reveal" data-kind="video" data-index="' + index + '">' +
           '<span class="thumb tone-' + (index % 6) + (thumb ? " has-image" : "") + '">' +
-            (thumb ? '<img src="' + esc(thumb) + '" alt="" ' + (index === 0 ? 'loading="eager"' : 'loading="lazy"') + '>' : "") +
+            (thumb ? pictureTag(thumb, mediaAlt(item), index === 0 ? "eager" : "lazy") : "") +
             (placeholder ? '<span class="badge">Placeholder</span>' : "") +
             '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l11-6.5-11-6.5z" fill="currentColor"></path></svg></span>' +
             '<span class="card-title">' + esc(item.title || "Untitled") + "</span>" +
@@ -206,7 +229,7 @@
       return (
         '<button type="button" class="still reveal' + (item.frame === "tall" ? " frame-tall" : "") + '" data-kind="image" data-index="' + index + '">' +
           '<span class="thumb tone-' + (index % 6) + (thumb ? " has-image" : "") + '">' +
-            (thumb ? '<img src="' + esc(thumb) + '" alt="" loading="lazy">' : "") +
+            (thumb ? pictureTag(thumb, mediaAlt(item), "lazy") : "") +
             (placeholder ? '<span class="badge">Placeholder</span>' : "") +
             '<span class="expand">View</span>' +
           "</span>" +
@@ -344,7 +367,7 @@
     if (state.kind === "image") {
       var img = document.createElement("img");
       img.src = media.type === "file" ? media.src : thumbFor(item);
-      img.alt = item.title || "";
+      img.alt = mediaAlt(item);
       img.addEventListener("error", function () {
         stage.replaceChildren(emptyPanel(state.kind, "This image did not load. Check the file path in data/media.js."));
       });
@@ -376,7 +399,7 @@
     video.setAttribute("webkit-playsinline", "");
     video.muted = false;
     video.removeAttribute("muted");
-    video.preload = "auto";
+    video.preload = "metadata";
     video.src = media.src;
     if (item.thumbnail) video.poster = normalizePath(item.thumbnail);
     video.addEventListener("error", function () {

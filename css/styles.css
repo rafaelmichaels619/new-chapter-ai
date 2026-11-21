@@ -368,16 +368,22 @@ a {
   pointer-events: none;
 }
 
-.hero-media .hero-still {
+.hero-media picture.hero-still {
   position: absolute;
   top: 0;
   right: 0;
   width: min(42vw, 640px);
   height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 24%);
   mask-image: linear-gradient(90deg, transparent, #000 24%);
+}
+
+.hero-media picture.hero-still img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
 }
 
 .hero-media.has-still ~ .hero-content h1 {
@@ -587,6 +593,12 @@ a {
   aspect-ratio: 16 / 9;
 }
 
+.thumb picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
 .thumb img {
   position: absolute;
   inset: 0;
@@ -595,6 +607,30 @@ a {
   object-fit: cover;
   transform: scale(1.01);
   transition: transform 0.7s ease;
+}
+
+.faq {
+  border-top: 1px solid var(--line);
+  margin-top: 0.4rem;
+}
+
+.faq-item {
+  padding: 1.15rem 0 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item h3 {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  margin-bottom: 0.45rem;
+}
+
+.faq-item p {
+  color: var(--ink-dim);
+  max-width: 46rem;
+}
+
+.process-head {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
 }
 
 .thumb:not(.has-image)::before {
@@ -1048,6 +1084,10 @@ a {
   color: var(--gold);
 }
 
+.legal-actions {
+  margin-top: 1.6rem;
+}
+
 /* Lightbox */
 
 .lightbox {
@@ -1318,12 +1358,15 @@ a {
     inset: 0.4rem;
   }
 
-  .hero-media .hero-still {
+  .hero-media picture.hero-still {
     left: 0;
     width: 100%;
-    object-position: center 0%;
     -webkit-mask-image: none;
     mask-image: none;
+  }
+
+  .hero-media picture.hero-still img {
+    object-position: center 0%;
   }
 
   .hero-media.has-still ~ .hero-content h1 {

@@ -63,7 +63,8 @@ const SITE = {
   hero: {
     video: "",
     thumbnail: "",
-    image: "assets/images/portrait-satin-blouse.jpg"
+    image: "assets/images/portrait-satin-blouse.jpg",
+    alt: "Woman in a cream satin blouse, seated in soft window light"
   },
 
   // TODO: replace each href with your profile URL.

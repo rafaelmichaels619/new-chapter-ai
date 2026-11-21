@@ -123,6 +123,9 @@ You do not need a custom domain, Node, or a hosting bill for this.
 | `index.html` | The page: hero, reel, gallery, services, about, contact |
 | `privacy.html` | Privacy Policy |
 | `terms.html` | Terms of Use |
+| `404.html` | Missing-page screen |
+| `robots.txt` | Crawler rules and the sitemap address |
+| `sitemap.xml` | Pages search engines should list |
 | `css/styles.css` | Look, motion, and the phone layout |
 | `js/main.js` | Lightbox, menus, and the contact form |
 | `data/media.js` | The list of films, stills, email, socials, and the form endpoint |
