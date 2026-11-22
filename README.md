@@ -98,7 +98,7 @@ All three are in `data/media.js`.
 
 ## How this gets onto GitHub Pages
 
-A workflow in `.github/workflows/pages.yml` publishes the site every time `main` changes. It copies the page, the styles, the scripts, and the `assets` folder, then hands that folder to GitHub Pages. There is no install and no build.
+A workflow in `.github/workflows/pages.yml` publishes the site every time `main` changes. It copies the studio pages, styles, scripts, the `assets` folder, and the `gild` folder, then hands that folder to GitHub Pages. There is no install and no build.
 
 Paths in the HTML (`css/styles.css`, `data/media.js`, and so on) are relative on purpose, so they work at `https://rafaelmichaels619.github.io/new-chapter-ai/` and also at `http://localhost:8080`.
 
@@ -132,6 +132,7 @@ You do not need a custom domain, Node, or a hosting bill for this.
 | `assets/videos/` | Your video files |
 | `assets/images/` | Stills and thumbnails |
 | `.github/workflows/pages.yml` | The GitHub Pages deploy |
+| `gild/` | Gild, the luxury travel planning site, served at `/gild/` |
 
 ## Check the link logic
 
