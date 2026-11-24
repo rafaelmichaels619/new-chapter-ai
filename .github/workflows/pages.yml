@@ -46,6 +46,8 @@ jobs:
           test -f _site/css/styles.css
           test -f _site/js/main.js
           test -f _site/data/media.js
+          test -f _site/assets/videos/real-estate-tour.mp4
+          test -f _site/assets/images/real-estate-tour-poster.jpg
           test -f _site/gild/index.html
           test -f _site/gild/privacy.html
           test -f _site/gild/terms.html
