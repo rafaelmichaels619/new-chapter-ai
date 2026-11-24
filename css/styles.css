@@ -543,20 +543,38 @@ a {
 
 .process .reveal:nth-child(4) { transition-delay: 0.24s; }
 
-/* Featured tour. The player keeps the file's own 808×720 frame. */
+/* Featured films. Each player keeps its own frame: 808×720 and 720×1280. */
 
-.showcase {
+.showcase-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.7fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
   margin: 0 0 clamp(2rem, 5vw, 3.25rem);
   scroll-margin-top: calc(var(--nav-h) + 1rem);
 }
 
+.showcase {
+  margin: 0;
+  min-width: 0;
+}
+
 .showcase-player {
   display: block;
-  width: min(100%, 40rem);
+  max-width: 100%;
   height: auto;
-  aspect-ratio: 808 / 720;
   background: var(--bg-2);
   border: 1px solid var(--line);
+}
+
+.showcase-player.is-wide {
+  width: 100%;
+  aspect-ratio: 808 / 720;
+}
+
+.showcase-player.is-tall {
+  width: min(100%, calc(min(40rem, 72vh) * 0.5625));
+  aspect-ratio: 720 / 1280;
 }
 
 .showcase h3 {
@@ -1247,6 +1265,16 @@ a {
 }
 
 /* Layout breakpoints */
+
+@media (max-width: 800px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-player.is-tall {
+    width: min(100%, calc(78vh * 0.5625));
+  }
+}
 
 @media (min-width: 700px) {
   .video-grid {
